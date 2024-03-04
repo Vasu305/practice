@@ -1,0 +1,13 @@
+provider "aws" {
+}
+resource "aws_instance" "name" {
+    
+    ami = "ami-07761f3ae34c4478d"
+    instance_type = "t2.micro"
+    key_name = "load"
+    subnet_id = "subnet-0cca5b01ac4819972"
+    tags = {
+      Name = "hello"
+    }
+  
+}
